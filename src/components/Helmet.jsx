@@ -2,22 +2,22 @@ import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 
 const Helmet = props => {
-        document.title = 'Yolo - ' + props.title;
+    document.title = 'Yolo - ' + props.title;
 
-        useEffect(() => {
-                window.scrollTo(0, 0)
-        }, [])
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
 
 
-        return (
-                <div>
-                        {props.children}
-                </div>
-        )
+    return (
+        <div>
+            {props.children}
+        </div>
+    )
 }
 
 Helmet.propTypes = {
-        title: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
 }
 
 export default Helmet
